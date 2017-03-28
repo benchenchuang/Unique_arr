@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var data = ['blue', 'red', 'green', 'blue'];
+    function uniqueData(data){
+        for(var i=0;i<data.length;i++){
+            for(var j=i+1;j<data.length;j++){
+                if(data[i]===data[j]){
+                    data.splice(j,1)
+                }
+            }
+        }
+        return data;
+    }
+    console.log(uniqueData(data));
+
+    function newData(data){
+        var arr=[];
+        for(var i=0;i<data.length;i++){
+            if(arr.indexOf(data[i])==-1){
+                arr.push(data[i])
+            }
+        }
+        return arr;
+    }
+    console.log(newData(data));
+
+</script>
+</body>
+</html>
